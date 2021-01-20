@@ -29,6 +29,7 @@ client.on('message', message => {
     .setColor('#945A1B')
     .setAuthor('Help Command', client.user.displayAvatarURL())
     .setDescription('ini commands nya sayang')
+    .addField('ADMINISTRATOR', '`kick` , `ban`')
     .setFooter('Official bot from Karsa Bestari');
   message.channel.send(ngentot)
 }
@@ -48,7 +49,7 @@ client.on('message', message => {
     const start = Date.now()
     message.channel.send("Looking for ping...").then(message => {
     const end = Date.now()
-    message.edit(`Hi darling:heart:.. This is your ping **${(end - start)}**ms!`) 
+    message.edit(`pong **${(end - start)}**ms!`) 
   } 
  )
 }
@@ -79,16 +80,43 @@ client.on('message', message => {
  }
 }
   
+/////////////////////////////////////////////////////////////////////////////
   
+  if(message.content.startsWith(`${prefix}kick`)) {
+
+    let member = message.mentions.members.first();
+    if(!member) return message.reply('?Who do you want to kick, Honey?:heart:')
+    member.kick().then((member) => {
+    message.channel.send(`:wave: Berhasil mengeluarkan ${member.displayName}`); 
+    }).catch(() => {
+    if(!message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      message.reply("Sorry, but you don't have permission for this");
+    } else if(member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      message.reply("Sorry, but you don't have permission for this");
+   }
+  }
+ )
+}
   
+/////////////////////////////////////////////////////////////////////////////
   
+  if(message.content.startsWith(`${prefix}ban`)) {
   
+  let member = message.mentions.members.first();
+  if(!member) return message.reply('Mau ban saha?')
+  member.ban().then((member) => {
+    message.channel.send(`:wave: Berhasil Ter-Ban ${member.displayName}!`);
+  }).catch(() => {
+    if(!message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      message.reply("Sorry, but you don't have permission for this");
+    } else if(member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
+      message.reply("Sorry, but you don't have permission for this");
+   } 
+  }
+ )  
+}  
   
-  
-  
-  
-  
-  
+/////////////////////////////////////////////////////////////////////////////
   
   
   
