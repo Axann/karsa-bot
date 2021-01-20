@@ -11,7 +11,7 @@ client.on('message', message => {
     
   }
   
-  client.user.setActivity(`ndak bisa basa enggress `, {type : 'LISTENING'});
+  client.user.setActivity(`ndak bisa basa enggress `, {type : 'WATCHING'});
   
   
   
