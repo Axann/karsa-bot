@@ -18,7 +18,7 @@ client.on('message', message => {
     message.channel.send('kan aku lagi main sama ahsan <3')
   }
   
-//////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
   
   client.user.setActivity(`with ahsan <3 `, {type : 'PLAYING'});
   
@@ -29,8 +29,32 @@ client.on('message', message => {
     .setColor('#945A1B')
     .setAuthor('Help Command', client.user.displayAvatarURL())
     .setDescription('ini commands nya sayang')
-    .setFooter('Made with love by Axann#6643');
+    .setFooter('Official bot from Karsa Bestari');
   message.channel.send(ngentot)
 }
+  
+/////////////////////////////////////////////////////////////////////////////
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 })
