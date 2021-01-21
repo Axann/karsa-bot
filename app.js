@@ -91,9 +91,9 @@ client.on('message', message => {
     message.channel.send(`:wave: Berhasil mengeluarkan ${member.displayName}`); 
     }).catch(() => {
     if(!message.member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
-      message.reply("Lu ga punya wewenang untuk Ban asu");
+      message.reply("Lu ga punya wewenang untuk Kick asu");
     } else if(member.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS', 'ADMINISTRATOR'])) {
-      message.reply("Lu ga punya wewenang untuk Ban asu");
+      message.reply("Lu ga punya wewenang untuk Kick asu");
    }
   }
  )
