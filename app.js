@@ -25,9 +25,11 @@ client.on('ready', () => {
 /////////////////////////////////////////////////////////////////////////////
 
 client.on('message', message => {
-
-  if(message.content === `@${client.user.tag}`) {
-    message.channel.send('Prefix ku pake (,) itu bang')
+  
+  if (message.author.bot) return false;
+  if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
+  if (message.mentions.has(client.user.id)) {
+        message.channel.send("Hello there! iam using Discord");
   }
   
   if(message.content === 'halo') {
@@ -134,14 +136,6 @@ client.on('message', message => {
 }  
   
 /////////////////////////////////////////////////////////////////////////////
-  
-  
-  client.on("message", message => {
-    if (message.author.bot) return false;
-    if (message.mentions.has(client.user.id)) {
-        message.channel.send("Hello there!");
-    };
-});
-  
+
   
 })
