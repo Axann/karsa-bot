@@ -39,7 +39,7 @@ client.on('message', message => {
   
   if(message.content.startsWith(`${prefix}say`)) {
     var text = message.content.split(' ').slice(1).join(' ')
-    if(!text) return message.reply('What did u say Honey?')
+    if(!text) return message.reply('Mau ngomong apaan su?')
     message.channel.send(text)
     message.delete();
 }
@@ -69,7 +69,7 @@ client.on('message', message => {
       .setFooter(`Requested by ${message.author.username}#${message.member.user.discriminator}`)
     message.channel.send(embed)  
 }
-  else{ message.channel.send("I can't find that user") }
+  else{ message.channel.send("Orang nya gaada diserver ini su") }
 } else{
     const embed = new Discord.MessageEmbed()
       .setColor('#945A1B')
