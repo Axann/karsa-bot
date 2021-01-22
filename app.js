@@ -139,19 +139,11 @@ client.on('message', message => {
   
 /////////////////////////////////////////////////////////////////////////////
 
-client.on('message', message => {
-	if (message.content === 'a') {
-		client.emit('guildMemberAdd', message.member) } } ) ;
-  
-client.on('guildMemberAdd', member => {
-    member.guild.channels.get('790845776771285003').send(`Welcome`); 
-});
-  
-  client.on('guildMemberAdd', member => {
-    member.roles.add(member.guild.roles.cache.find(i => i.name === 'Among The Server'))
-
-
-    member.guild.channels.cache.find(i => i.name === 'greetings').send(welcomeEmbed)
+client.on('message', message => {  if (message.content === '518454874') {client.emit('guildMemberAdd', message.member) } })
+client.on('guildMemberAdd', async member => {
+	const channel = member.guild.channels.cache.get("790845776771285003")
+	if (!channel) return; 
+  channel.send((`Selamat datang ${member} di server ini.` )  )
 })
   
 /////////////////////////////////////////////////////////////////////////////
