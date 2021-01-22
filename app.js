@@ -6,9 +6,18 @@ client.login(process.env.TOKEN)
 
 var prefix = ','
 
+client.on('ready', () => {
+  console.log(`Bot ${client.user.tag} dah aktif NGENTODDD!`);
+});
+
 /////////////////////////////////////////////////////////////////////////////
 
 client.on('message', message => {
+
+  if(message.content === 'Rikka Takarada
+#3462') {
+    message.channel.send('haii')
+  }
   
   if(message.content === 'halo') {
     message.channel.send('haii')
@@ -20,7 +29,7 @@ client.on('message', message => {
   
 /////////////////////////////////////////////////////////////////////////////
   
-  client.user.setActivity(`,help | Karsa official BOT `, {type : 'WATCHING'});
+client.user.setActivity(`,help | Karsa official BOT `, {type : 'WATCHING'});
   
 /////////////////////////////////////////////////////////////////////////////
   
