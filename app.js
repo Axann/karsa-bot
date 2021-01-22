@@ -31,11 +31,11 @@ client.on('message', message => {
   if (message.author.bot) return false;
   if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
   if (message.mentions.has(client.user.id)) {
-        message.channel.send("Hello there! iam using Discord");
+        message.channel.send("Apa sayang?");
   }
   
   if(message.content === 'halo') {
-    message.channel.send('haii')
+    message.channel.send('haiiii')
   }
   
   if(message.content === 'hai') {
@@ -143,7 +143,7 @@ client.on('message', message => {  if (message.content === '13253850673650670788
 client.on('guildMemberAdd', async member => {
 	const channel12 = member.guild.channels.cache.get("790845776771285003")
 	if (!channel12) return; 
-  channel12.send((`PIKI NGEOD` )  )
+  channel12.send((`SUMATRA SANGEAN ASU` )  )
 })
   
 /////////////////////////////////////////////////////////////////////////////
