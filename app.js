@@ -12,9 +12,21 @@ client.on('ready', () => {
 
 /////////////////////////////////////////////////////////////////////////////
 
+  const status = [
+    `Ahsan Ganteng`,
+    `Developer Kang Comli`,
+    `asu`,
+    `aku sayang kamu` ]
+  
+  setInterval(() => {
+  client.user.setActivity(status[Math.floor(Math.random() * status.length)], {type : "PLAYING"})
+  }, 5000)
+
+/////////////////////////////////////////////////////////////////////////////
+
 client.on('message', message => {
 
-  if(message.content === '@RikkaTakarada#3462') {
+  if(message.content === `@${client.user.tag}`) {
     message.channel.send('Prefix ku pake (,) itu bang')
   }
   
@@ -25,18 +37,6 @@ client.on('message', message => {
   if(message.content === 'hai') {
     message.channel.send('Haloooo')
   }
-  
-/////////////////////////////////////////////////////////////////////////////
-  
-    const status = [
-    `aa`,
-    `asu`,
-    `aku sayang kamu`
-    ]
-  setInterval(() => {
-client.user.setActivity(status[Math.floor(Math.random() * status.length)], {type : "WATCHING"})
-    
-      }, 5000)
   
 /////////////////////////////////////////////////////////////////////////////
   
@@ -134,5 +134,14 @@ client.user.setActivity(status[Math.floor(Math.random() * status.length)], {type
 }  
   
 /////////////////////////////////////////////////////////////////////////////
+  
+  
+  client.on("message", message => {
+    if (message.author.bot) return false;
+    if (message.mentions.has(client.user.id)) {
+        message.channel.send("Hello there!");
+    };
+});
+  
   
 })
