@@ -14,9 +14,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-  if(message.content === 'Rikka Takarada
-#3462') {
-    message.channel.send('haii')
+  if(message.content === '@RikkaTakarada#3462') {
+    message.channel.send('Prefix ku pake (,) itu bang')
   }
   
   if(message.content === 'halo') {
@@ -29,7 +28,15 @@ client.on('message', message => {
   
 /////////////////////////////////////////////////////////////////////////////
   
-client.user.setActivity(`,help | Karsa official BOT `, {type : 'WATCHING'});
+    const status = [
+    `aa`,
+    `asu`,
+    `aku sayang kamu`
+    ]
+  setInterval(() => {
+client.user.setActivity(status[Math.floor(Math.random() * status.length)], {type : "WATCHING"})
+    
+      }, 5000)
   
 /////////////////////////////////////////////////////////////////////////////
   
