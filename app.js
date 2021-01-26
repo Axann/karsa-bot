@@ -56,7 +56,7 @@ const gifwelcome = [
     `https://tenor.com/view/fun-anime-girl-cute-smile-welcome-gif-14815902`,
     `https://tenor.com/view/welcome-anime-mask-greetings-gif-17495343` ]
 
-  const welcome = [`welcome`, `wlcm`, `welkam`]
+  const welcome = [`welcome`, `wlcm`, `welkam`, `kam`]
      {
         if (welcome.some(word => message.content.toLowerCase().includes(word))) {
           if (message.author.bot) return;
@@ -169,5 +169,5 @@ client.on('guildMemberAdd', async member => {
 /////////////////////////////////////////////////////////////////////////////
   
 process.setMaxListeners(0);
-  
+
 })
