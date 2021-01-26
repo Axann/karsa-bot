@@ -48,15 +48,19 @@ client.on('message', message => {
   
 /////////////////////////////////////////////////////////////////////////////
   
-const status = [
+const gifwelcome = [
     `https://c.tenor.com/L9frOQ90sU8AAAAM/welcome-home-anime.gif`,
     `https://c.tenor.com/wZW05QUURk4AAAAM/welcome-anime.gif`,
     `https://c.tenor.com/St6dO-mo8jkAAAAM/meliodas-nanatsu-no-taizai.gif`, 
-    `https://c.tenor.com/rvYiscAk_kAAAAAM/anime-welcome.gif` ]
-  
-if(message.content === 'welkam') {
-    message.channel.send('')
-  }
+    `https://c.tenor.com/rvYiscAk_kAAAAAM/anime-welcome.gif`,
+    `https://tenor.com/view/fun-anime-girl-cute-smile-welcome-gif-14815902`,
+    `https://tenor.com/view/welcome-anime-mask-greetings-gif-17495343` ]
+
+  const welcome = [`welcome`, `wlcm`, `welkam`]
+     {
+        if (welcome.some(word => message.content.toLowerCase().includes(word))) {
+          if (message.author.bot) return;
+             message.channel.send(gifwelcome[Math.floor(Math.random() * gifwelcome.length)]) } }
   
 /////////////////////////////////////////////////////////////////////////////
   
@@ -161,29 +165,6 @@ client.on('guildMemberAdd', async member => {
 	if (!channel12) return; 
   channel12.send((`FARAH JANCOK` )  )
 })
-  
-  
-  
-  
-  
-  
-  const gifwelcome = [
-    `Ahsan Ganteng`,
-    `,help | To get started`,
-    `KarsaBestari official Bot`, 
-    `aku sayang kamu` ]
-  
-  
-  const welcome = [`welcome`, `wlcm`, `welkam`]
-     {
-        if (welcome.some(word => message.content.toLowerCase().includes(word))) {
-          if (message.author.bot) return;
-             message.channel.send(gifwelcome[Math.floor(Math.random() * status.length) 
-  
-  
-  
-  
-  
   
 /////////////////////////////////////////////////////////////////////////////
   
