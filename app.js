@@ -42,6 +42,10 @@ client.on('message', message => {
     message.channel.send('Haloooo')
   }
   
+  if(message.content === 'welkam') {
+    message.channel.send('https://c.tenor.com/nY1Nx5npKF4AAAAM/aesthetic-cafe.gif')
+  }
+  
 /////////////////////////////////////////////////////////////////////////////
   
   if(message.content.startsWith(`${prefix}help`)) {
@@ -143,7 +147,7 @@ client.on('message', message => {  if (message.content === '13253850673650670788
 client.on('guildMemberAdd', async member => {
 	const channel12 = member.guild.channels.cache.get("790845776771285003")
 	if (!channel12) return; 
-  channel12.send((`SUMATRA SANGEAN ASU` )  )
+  channel12.send((`FARAH JANCOK` )  )
 })
   
 /////////////////////////////////////////////////////////////////////////////
